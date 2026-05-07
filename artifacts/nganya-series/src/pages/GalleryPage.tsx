@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSEO } from "@/hooks/useSEO";
 import { X } from "lucide-react";
 
 import nganyaBackNoBg from "@assets/nganya_back_no_bg_1778153978490.png";
@@ -79,6 +80,13 @@ const items: GalleryItem[] = [
 ];
 
 export default function GalleryPage() {
+  useSEO({
+    title: "Gallery — Art In Motion",
+    description: "Explore the NGANYA SERIES gallery — stunning nganya art, matatu designs, and Nairobi street culture captured in vivid detail. Bold. Loud. Unapologetic.",
+    keywords: "nganya gallery, matatu art gallery, Kenya matatu photos, Nairobi street culture photos, matatu design gallery, nganya photos, matatu artwork Kenya",
+    canonical: "/gallery",
+  });
+
   const [selected, setSelected] = useState<GalleryItem | null>(null);
 
   return (

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 import nganyaFront from "@assets/nganya_front_1778153978491.jpg";
 import nganyaBack from "@assets/nganya_back_1778153978495.jpg";
 import nganyaFull from "@assets/nganya_full_1778153978492.jpg";
@@ -49,6 +50,13 @@ const stories = [
 ];
 
 export default function StoriesPage() {
+  useSEO({
+    title: "Stories — Culture on Wheels",
+    description: "Read exclusive stories from NGANYA SERIES — interviews with drivers, artists, builders, and the voices behind Kenya's vibrant matatu culture movement. Issue 001 available now.",
+    keywords: "nganya stories, matatu culture stories, Kenya matatu interviews, matatu driver stories, Nairobi street culture stories, nganya series magazine, matatu art stories",
+    canonical: "/stories",
+  });
+
   return (
     <main className="min-h-screen bg-background pt-24">
 

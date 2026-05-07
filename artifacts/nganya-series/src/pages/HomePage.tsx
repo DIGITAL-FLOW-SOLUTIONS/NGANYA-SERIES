@@ -1,10 +1,18 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 import nganyaFrontNoBg from "@assets/nganya_front_no_bg_1778153978492.png";
 import nganyaFull from "@assets/nganya_full_1778153978492.jpg";
 import nganyaBackNoBg from "@assets/nganya_back_no_bg_1778153978490.png";
 
 export default function HomePage() {
+  useSEO({
+    title: "Kenya's Premier Matatu Art & Culture Movement",
+    description: "NGANYA SERIES celebrates Kenya's vibrant matatu culture through art, automotive excellence, and street stories. Bold. Loud. Unapologetic. No Risk. No Story. Nairobi's boldest art movement. Est 2026.",
+    keywords: "nganya, nganya series, matatu art, Kenya matatu culture, Nairobi street art, matatu design, matatu culture Kenya, East Africa street culture, nganya art, matatu lifestyle, rolling pride",
+    canonical: "/",
+  });
+
   return (
     <main className="min-h-screen w-full flex flex-col pt-24 bg-background">
       

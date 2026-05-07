@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Mail, Phone, Instagram, Youtube } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 import kenyaFlag from "@assets/Flag_of_Kenya_1778153978494.png";
 import nganyaBackNoBg from "@assets/nganya_back_no_bg_1778153978490.png";
 
@@ -9,6 +10,13 @@ const fadeUp = {
 };
 
 export default function ContactPage() {
+  useSEO({
+    title: "Contact — Get In Touch",
+    description: "Contact NGANYA SERIES for collaborations, to feature your nganya, share your story, or join the movement. Based in Nairobi, Kenya. nganyaseries@gmail.com | +254 702 087 671",
+    keywords: "contact nganya series, collaborate nganya, feature matatu Kenya, nganya series email, matatu collaboration Kenya, Nairobi art collaboration",
+    canonical: "/contact",
+  });
+
   return (
     <main className="min-h-screen bg-background pt-24 relative overflow-x-hidden">
 

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 import nganyaFull from "@assets/nganya_full_1778153978492.jpg";
 import nganyaFullNoBg from "@assets/nganya_full_no_bg_1778153978493.png";
 import nganyaBack from "@assets/nganya_back_1778153978495.jpg";
@@ -56,6 +57,13 @@ const sections = [
 ];
 
 export default function AboutPage() {
+  useSEO({
+    title: "About — Rolling Pride, The Culture on Wheels",
+    description: "Learn about NGANYA SERIES — a Nairobi-born movement celebrating Kenya's matatu culture, street art, and the creative minds behind East Africa's boldest automotive art. Est 2026.",
+    keywords: "about nganya series, matatu culture history, Kenya street art movement, Nairobi art movement, matatu art community, rolling pride Kenya",
+    canonical: "/about",
+  });
+
   return (
     <main className="min-h-screen bg-background pt-24">
 
