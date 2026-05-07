@@ -2,7 +2,6 @@
   "framework": null,
   "installCommand": "pnpm install",
   "buildCommand": "pnpm --filter @workspace/nganya-series run build:vercel",
-  "outputDirectory": "artifacts/nganya-series/dist/public",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
