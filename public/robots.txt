@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nganyaseries.co.ke/sitemap.xml
