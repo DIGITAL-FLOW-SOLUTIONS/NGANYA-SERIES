@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="group flex flex-col cursor-pointer">
               <span className="font-display text-5xl leading-none text-white">NGANYA</span>
-              <span className="font-display text-2xl leading-none text-accent">SERIES</span>
+              <span className="text-2xl leading-none text-accent italic font-semibold tracking-widest" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>SERIES</span>
             </Link>
             <p className="text-muted-foreground max-w-sm mt-4">
               More than a magazine. It's a movement. Celebrating the spirit of our streets, the creativity of our people, and the culture that drives us forward.
