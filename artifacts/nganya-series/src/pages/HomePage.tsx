@@ -110,7 +110,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="relative aspect-square md:aspect-video lg:aspect-square"
             >
-              <img src={nganyaFull} alt="Nganya Full" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+              <img src={nganyaFull} alt="Nganya Full" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/40 to-transparent mix-blend-overlay" />
             </motion.div>
           </div>
