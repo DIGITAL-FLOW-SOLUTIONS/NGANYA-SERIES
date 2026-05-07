@@ -46,7 +46,7 @@ export default function Navbar() {
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="group flex flex-col z-50 relative cursor-pointer">
             <span className="font-display text-4xl leading-none text-white group-hover:text-primary transition-colors">NGANYA</span>
-            <span className="text-xl leading-none italic tracking-widest" style={{ fontFamily: "'Exo 2', sans-serif", fontWeight: 200, color: "#4A9FE0" }}>SERIES</span>
+            <span className="text-xl leading-none tracking-widest" style={{ fontFamily: "'Ethnocentric', sans-serif", fontWeight: 400, color: "#4A9FE0" }}>/SERIES</span>
           </Link>
 
           {/* Desktop Nav */}
