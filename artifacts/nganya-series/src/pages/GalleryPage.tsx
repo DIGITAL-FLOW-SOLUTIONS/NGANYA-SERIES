@@ -6,12 +6,11 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import banner1 from "@assets/banner_1_1778153978493.png";
 import banner2 from "@assets/banner_2_1778153978494.png";
 
-import mzalendo1 from "@assets/WhatsApp_Image_2026-05-07_at_7.07.13_PM_1778171661374.jpeg";
 import mzalendo2 from "@assets/WhatsApp_Image_2026-05-07_at_7.07.13_PM_(1)_1778171661387.jpeg";
 import mzalendo3 from "@assets/WhatsApp_Image_2026-05-07_at_7.07.12_PM_1778171661388.jpeg";
 import mzalendo4 from "@assets/WhatsApp_Image_2026-05-07_at_7.07.12_PM_(1)_1778171661389.jpeg";
 
-const featuredImages = [mzalendo1, mzalendo2, mzalendo3, mzalendo4];
+const featuredImages = [mzalendo2, mzalendo3, mzalendo4];
 
 const galleryModules = import.meta.glob("@assets/gallery/*.jpeg", { eager: true });
 const galleryImages: string[] = Object.values(galleryModules).map(
