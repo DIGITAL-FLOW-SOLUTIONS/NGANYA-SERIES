@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import kenyaFlag from "@assets/Flag_of_Kenya_1778153978494.png";
+import dfsLogo from "@assets/logo-white_1778155993835.png";
 
 export default function Footer() {
   return (
@@ -35,13 +36,23 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-muted-foreground">
+        <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-muted-foreground gap-4">
           <p>© 2026 NGANYA SERIES. OUR CULTURE. OUR STORIES. OUR LEGACY.</p>
-          <div className="flex gap-4 mt-4 md:mt-0">
+          <div className="flex gap-4">
             <Link href="/about" className="hover:text-white">ABOUT</Link>
             <Link href="/gallery" className="hover:text-white">GALLERY</Link>
             <Link href="/contact" className="hover:text-white">CONTACT</Link>
           </div>
+          <a
+            href="https://wa.me/254741033338?text=Hey%20DFS%2C%20I%20like%20your%20design%2C%20can%20we%20talk%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity"
+            data-testid="link-designed-by"
+          >
+            <span className="tracking-widest uppercase">Designed by</span>
+            <img src={dfsLogo} alt="DFS" className="h-5 w-auto" />
+          </a>
         </div>
       </div>
     </footer>
