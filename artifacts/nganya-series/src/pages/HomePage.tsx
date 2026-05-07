@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { useSEO } from "@/hooks/useSEO";
 import nganyaFrontNoBg from "@assets/nganya_front_no_bg_1778153978492.png";
-import nganyaFull from "@assets/nganya_full_1778153978492.jpg";
+import nganyaFull from "@assets/WhatsApp_Image_2026-05-07_at_7.07.12_PM_(1)_1778172516038.jpeg";
 import nganyaBackNoBg from "@assets/nganya_back_no_bg_1778153978490.png";
 
 export default function HomePage() {
