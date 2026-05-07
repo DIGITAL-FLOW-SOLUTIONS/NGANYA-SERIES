@@ -6,6 +6,7 @@ import NotFound from "@/pages/not-found";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import HomePage from "@/pages/HomePage";
 import AboutPage from "@/pages/AboutPage";
 import GalleryPage from "@/pages/GalleryPage";
@@ -17,6 +18,7 @@ const queryClient = new QueryClient();
 function Router() {
   return (
     <div className="flex flex-col min-h-screen">
+      <ScrollToTop />
       <Navbar />
       <Switch>
         <Route path="/" component={HomePage} />
