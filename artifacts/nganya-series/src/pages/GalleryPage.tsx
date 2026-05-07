@@ -6,6 +6,13 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import banner1 from "@assets/banner_1_1778153978493.png";
 import banner2 from "@assets/banner_2_1778153978494.png";
 
+import mzalendo1 from "@assets/WhatsApp_Image_2026-05-07_at_7.07.13_PM_1778171661374.jpeg";
+import mzalendo2 from "@assets/WhatsApp_Image_2026-05-07_at_7.07.13_PM_(1)_1778171661387.jpeg";
+import mzalendo3 from "@assets/WhatsApp_Image_2026-05-07_at_7.07.12_PM_1778171661388.jpeg";
+import mzalendo4 from "@assets/WhatsApp_Image_2026-05-07_at_7.07.12_PM_(1)_1778171661389.jpeg";
+
+const featuredImages = [mzalendo1, mzalendo2, mzalendo3, mzalendo4];
+
 const galleryModules = import.meta.glob("@assets/gallery/*.jpeg", { eager: true });
 const galleryImages: string[] = Object.values(galleryModules).map(
   (mod) => (mod as { default: string }).default
@@ -84,6 +91,31 @@ export default function GalleryPage() {
             Designs that tell stories. Colors that speak. Legends that roll.
             Every image here is a chapter in the nganya story.
           </motion.p>
+        </div>
+      </section>
+
+      {/* Featured Mzalendo masonry section */}
+      <section className="pt-6 pb-2">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="columns-2 sm:columns-3 lg:columns-4 gap-2 md:gap-3">
+            {featuredImages.map((src, i) => (
+              <motion.div
+                key={i}
+                className="break-inside-avoid mb-2 md:mb-3 cursor-pointer group relative overflow-hidden bg-card"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.07 }}
+              >
+                <img
+                  src={src}
+                  alt={`Mzalendo matatu photo ${i + 1}`}
+                  loading="eager"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
