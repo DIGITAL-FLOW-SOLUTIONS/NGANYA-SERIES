@@ -11,11 +11,13 @@ import mzalendo2 from "@assets/WhatsApp_Image_2026-05-07_at_7.07.13_PM_(1)_17781
 import mzalendo3 from "@assets/WhatsApp_Image_2026-05-07_at_7.07.12_PM_1778171661388.jpeg";
 import mzalendo4 from "@assets/WhatsApp_Image_2026-05-07_at_7.07.12_PM_(1)_1778171661389.jpeg";
 
-const featuredImages = [mzalendo1, mzalendo2, mzalendo3, mzalendo4];
+const featuredImages = [mzalendo2, mzalendo3];
 
-const galleryModules = import.meta.glob("@assets/gallery/*.jpeg", { eager: true });
+const galleryModules = import.meta.glob("@assets/gallery/*.jpeg", {
+  eager: true,
+});
 const galleryImages: string[] = Object.values(galleryModules).map(
-  (mod) => (mod as { default: string }).default
+  (mod) => (mod as { default: string }).default,
 );
 
 export default function GalleryPage() {
@@ -36,17 +38,19 @@ export default function GalleryPage() {
   const prev = useCallback(
     () =>
       setLightboxIndex((i) =>
-        i !== null ? (i - 1 + galleryImages.length) % galleryImages.length : null
+        i !== null
+          ? (i - 1 + galleryImages.length) % galleryImages.length
+          : null,
       ),
-    []
+    [],
   );
 
   const next = useCallback(
     () =>
       setLightboxIndex((i) =>
-        i !== null ? (i + 1) % galleryImages.length : null
+        i !== null ? (i + 1) % galleryImages.length : null,
       ),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -62,7 +66,6 @@ export default function GalleryPage() {
 
   return (
     <main className="min-h-screen bg-background pt-20">
-
       {/* Header */}
       <section className="py-12 md:py-16 border-b border-border">
         <div className="container mx-auto px-4 md:px-6">
@@ -227,7 +230,10 @@ export default function GalleryPage() {
             {/* Prev */}
             <button
               className="absolute left-2 md:left-6 text-white hover:text-primary transition-colors z-10 p-3"
-              onClick={(e) => { e.stopPropagation(); prev(); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                prev();
+              }}
               aria-label="Previous"
             >
               <ChevronLeft size={36} />
@@ -253,7 +259,10 @@ export default function GalleryPage() {
             {/* Next */}
             <button
               className="absolute right-2 md:right-6 text-white hover:text-primary transition-colors z-10 p-3"
-              onClick={(e) => { e.stopPropagation(); next(); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                next();
+              }}
               aria-label="Next"
             >
               <ChevronRight size={36} />
